@@ -36,4 +36,21 @@ public class Song {
 		result += map_numbers[0]+" "+map[0]+".";
 		return result;
 	}
+	public String getVerse(int a, int b) {
+		int start,end;
+		if(a>b) {
+			end = a;
+			start = b;
+		}
+		else {
+			end = b;
+			start = a;
+		}
+				
+		String result = "";
+		for(int i = start; i <= end ; i++) {
+			result += getVerse(i);
+		}
+		return result;
+	}
 }

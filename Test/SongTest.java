@@ -40,7 +40,7 @@ public class SongTest {
         		song.getVerse(12));
     }
     
-    @Ignore
+    
     @Test
     public void test3getverse1to2() {
     	assertEquals(
