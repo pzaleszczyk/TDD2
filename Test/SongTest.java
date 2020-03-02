@@ -48,9 +48,24 @@ public class SongTest {
     			"On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
         		song.getVerse(1,2));
     }
+    
+    @Test
+    public void test3getverse2to1() {
+    	assertEquals(
+    			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree."+
+    			"On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
+        		song.getVerse(2,1));
+    }
+    
+    @Test
+    public void test3getverse1to1() {
+    	assertEquals(
+    			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
+        		song.getVerse(1,1));
+    }
 
 
-    @Ignore
+    
     @Test
     public void testfullsong() {
         assertEquals("On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree."+
@@ -64,7 +79,7 @@ public class SongTest {
         		"On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree." + 
         		"On the tenth day of Christmas my true love gave to me: ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree." + 
         		"On the eleventh day of Christmas my true love gave to me: eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree." + 
-        		"On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.",\
+        		"On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.",
         		song.getVerse());
     }
 

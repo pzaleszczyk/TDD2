@@ -53,4 +53,8 @@ public class Song {
 		}
 		return result;
 	}
+	public String getVerse() {
+		String result = getVerse(1,12);
+		return result;
+	}
 }
