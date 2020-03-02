@@ -16,11 +16,24 @@ public class Song {
 			"Pipers Piping",
 			"Drummers Drumming"
 			};
+	String[] map_days = {
+			"first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth","eleventh","twelfth"
+	};
+	String[] map_numbers = {
+			"a","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve"
+	};
 	
 	public String getVerse(int n) {
-		if(n == 2)
-			return "On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.";
-		else
-			return "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.";
+		String result = "On the ";
+		result += map_days[n-1];
+		result += " day of Christmas my true love gave to me: ";
+		
+		for(int i = n-1 ; i > 0; i --) {
+			result += map_numbers[i]+" "+map[i]+",";
+		}
+		if(n>1)
+			result += " and ";
+		result += map_numbers[0]+" "+map[0]+".";
+		return result;
 	}
 }
