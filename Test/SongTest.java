@@ -23,7 +23,7 @@ public class SongTest {
         		song.getVerse(1));
     }
 
-    @Ignore
+    
     @Test
     public void test2getverse2() {
     	assertEquals("On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
