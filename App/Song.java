@@ -24,6 +24,9 @@ public class Song {
 	};
 	
 	public String getVerse(int n) {
+		if(n <= 0 || n > 12)
+			throw new IllegalArgumentException();
+		
 		String result = "On the ";
 		result += map_days[n-1];
 		result += " day of Christmas my true love gave to me: ";

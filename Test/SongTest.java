@@ -16,6 +16,8 @@ public class SongTest {
     public void setup() {
     	song = new Song();
     }
+    
+
 
     @Test
     public void test1getverse1() {
@@ -42,7 +44,7 @@ public class SongTest {
     
     
     @Test
-    public void test3getverse1to2() {
+    public void test4getverse1to2() {
     	assertEquals(
     			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree."+
     			"On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
@@ -50,7 +52,7 @@ public class SongTest {
     }
     
     @Test
-    public void test3getverse2to1() {
+    public void test5getverse2to1() {
     	assertEquals(
     			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree."+
     			"On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
@@ -58,12 +60,25 @@ public class SongTest {
     }
     
     @Test
-    public void test3getverse1to1() {
+    public void test6getverse1to1() {
     	assertEquals(
     			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
         		song.getVerse(1,1));
     }
 
+    @Test (expected = IllegalArgumentException.class)
+    public void test7getverseFromToWithNegative() {
+    	assertEquals(
+    			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
+        		song.getVerse(-1,1));
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void test7getverseWithNegative() {
+    	assertEquals(
+    			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
+        		song.getVerse(-1));
+    }
 
     
     @Test
