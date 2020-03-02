@@ -29,10 +29,10 @@ public class Song {
 		result += " day of Christmas my true love gave to me: ";
 		
 		for(int i = n-1 ; i > 0; i --) {
-			result += map_numbers[i]+" "+map[i]+",";
+			result += map_numbers[i]+" "+map[i]+", ";
 		}
 		if(n>1)
-			result += " and ";
+			result += "and ";
 		result += map_numbers[0]+" "+map[0]+".";
 		return result;
 	}

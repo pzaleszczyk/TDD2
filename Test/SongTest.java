@@ -30,7 +30,7 @@ public class SongTest {
         		song.getVerse(2));
     }
 
-    @Ignore
+    
     @Test
     public void test3getverse12() {
     	assertEquals("On the twelfth day of Christmas my true love gave to me:"
