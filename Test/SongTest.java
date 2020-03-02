@@ -74,24 +74,33 @@ public class SongTest {
     }
     
     @Test (expected = IllegalArgumentException.class)
-    public void test7getverseWithNegative() {
+    public void test8getverseWithNegative() {
     	assertEquals(
     			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
         		song.getVerse(-1));
     }
     
     @Test (expected = IllegalArgumentException.class)
-    public void test7getverseFromToOver12() {
+    public void test9getverseFromToOver12() {
     	assertEquals(
     			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
         		song.getVerse(1,13));
     }
     
     @Test (expected = IllegalArgumentException.class)
-    public void test7getverseOver12() {
+    public void test10getverseOver12() {
     	assertEquals(
     			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
         		song.getVerse(13));
+    }
+    
+    @Test
+    public void test11getverse5to7() {
+    	assertEquals(
+    			"On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."+
+    			"On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."+
+    			"On the seventh day of Christmas my true love gave to me: seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.",
+        		song.getVerse(5,7));
     }
 
     
