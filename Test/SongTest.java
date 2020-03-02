@@ -79,6 +79,20 @@ public class SongTest {
     			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
         		song.getVerse(-1));
     }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void test7getverseFromToOver12() {
+    	assertEquals(
+    			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
+        		song.getVerse(1,13));
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    public void test7getverseOver12() {
+    	assertEquals(
+    			"On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
+        		song.getVerse(13));
+    }
 
     
     @Test
